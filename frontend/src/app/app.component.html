@@ -1,0 +1,42 @@
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <h3>Weather Report</h3>
+    <div class="spacer"></div>
+    <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
+      
+    </a>
+</div>
+
+<!-- Content -->
+
+<div class="card-container">
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+
+  </div>
+
+<div class="content">
+  
+  <div class="weather-card" *ngFor="let city of city_cards"> 
+    <h5 class="date">{{city.date}}</h5>
+    <h1>{{city.name}}</h1>
+    <p class="temp-p">
+    <img class="icon" [src]="city.img">
+    {{city.temp}}°
+    </p>
+    <h6 class="additional-temp">Feels like {{city.feels_like}}°</h6>
+    <h6 class="additional-temp">Min {{city.temp_min}}°, Max {{city.temp_max}}°</h6>
+  </div>
+
+
+
+
+</div>
+
+
+
+<router-outlet></router-outlet>
